@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>CCW EasyRead App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript">
+			function loadPlayer() {
+				var audioPlayer = new Audio();
+				audioPlayer.controls="controls";
+				audioPlayer.addEventListener('ended',nextSong,false);
+				audioPlayer.addEventListener('error',errorFallback,true);
+				document.getElementById("audio").appendChild(audioPlayer);
+				nextSong();
+			}
+			function nextSong() {
+				if(urls[next]!=undefined) {
+					var audioPlayer = document.getElementsByTagName('audio')[0];
+					if(audioPlayer!=undefined) {
+						audioPlayer.src=urls[next];
+						audioPlayer.load();
+						audioPlayer.play();
+						next++;
+					} else {
+						loadPlayer();
+					}
+				}
+			}
+			function errorFallback() {
+					playPause();
+			}
+			function playPause() {
+				var audioPlayer = document.getElementsByTagName('audio')[0];
+				if(audioPlayer!=undefined) {
+					if (audioPlayer.paused) {
+						audioPlayer.play();
+					} else {
+						audioPlayer.pause();
+					}
+				} else {
+					loadPlayer();
+				}
+			}
+			function pickSong(num) {
+				next = num;
+				nextSong();
+			}
+		 
+			var urls = new Array();
+			urls[1] = 'audio/code-1.wav';
+			urls[2] = '';
+			urls[3] = 'audio/code-2.wav';
+			urls[4] = '';
+			urls[5] = 'audio/code-3.wav';
+			urls[6] = '';
+			urls[7] = 'audio/code-4.wav';
+			urls[8] = '';
+			urls[9] = 'audio/code-5.wav';
+			urls[10] = '';
+			urls[11] = 'audio/code-6.wav';
+			urls[12] = '';
+			urls[13] = 'audio/code-7.wav';
+			urls[14] = '';
+			urls[15] = 'audio/code-8.wav';
+			urls[16] = '';
+			urls[17] = 'audio/code-9.wav';
+			urls[18] = '';
+			urls[19] = 'audio/code-10.wav';
+			urls[20] = '';
+			urls[21] = 'audio/code-11.wav';
+			urls[22] = '';
+			urls[23] = 'audio/code-12.wav';
+			urls[24] = '';
+			urls[25] = 'audio/code-13.wav';
+			urls[26] = '';
+			urls[27] = 'audio/code-14.wav';
+			urls[28] = '';
+			urls[29] = 'audio/code-15.wav';
+			urls[30] = '';
+			urls[31] = 'audio/code-16.wav';
+			urls[32] = '';
+			urls[33] = 'audio/code-17.wav';
+			urls[34] = '';
+			urls[35] = 'audio/code-18.wav';
+			urls[36] = '';
+			urls[37] = 'audio/code-19.wav';
+			urls[38] = '';
+			urls[39] = 'audio/code-20.wav';
+			urls[40] = '';
+			urls[41] = 'audio/code-21.wav';
+			urls[42] = '';
+			urls[43] = 'audio/code-22.wav';
+			urls[44] = '';
+			urls[45] = 'audio/code-23.wav';
+			urls[46] = '';
+			urls[47] = 'audio/code-24.wav';
+			urls[48] = '';
+			urls[49] = 'audio/code-25.wav';
+			urls[50] = '';
+			urls[51] = 'audio/code-26.wav';
+			urls[52] = '';
+			urls[53] = 'audio/code-27.wav';
+			urls[54] = '';
+			urls[55] = 'audio/code-28.wav';
+			urls[56] = '';
+			urls[57] = 'audio/code-29.wav';
+			urls[58] = '';
+			urls[59] = 'audio/code-30.wav';
+			urls[60] = '';
+			urls[61] = 'audio/code-31.wav';
+			urls[62] = '';
+			urls[63] = 'audio/code-32.wav';
+			urls[64] = '';
+			urls[65] = 'audio/code-33.wav';
+			urls[66] = '';
+			urls[67] = 'audio/code-34.wav';
+			urls[68] = '';
+			urls[69] = 'audio/code-35.wav';
+			urls[70] = '';
+			urls[71] = 'audio/code-36.wav';
+			urls[72] = '';
+			urls[73] = 'audio/code-37.wav';
+			urls[74] = '';
+			urls[75] = 'audio/code-38.wav';
+			urls[76] = '';
+			urls[77] = 'audio/code-39.wav';
+			urls[78] = '';
+			urls[79] = 'audio/code-40.wav';
+			urls[80] = '';
+			urls[81] = 'audio/code-41.wav';
+			urls[82] = '';
+			urls[83] = 'audio/code-42.wav';
+			urls[84] = '';
+			urls[85] = 'audio/code-43.wav';
+			urls[86] = '';
+			urls[87] = 'audio/code-44.wav';
+			urls[88] = '';
+			urls[89] = 'audio/code-45.wav';
+			urls[90] = '';
+			urls[91] = 'audio/code-46.wav';
+			urls[92] = '';
+			urls[93] = 'audio/code-47.wav';
+			urls[94] = '';
+			urls[95] = 'audio/code-48.wav';
+			urls[96] = '';
+			urls[97] = 'audio/code-49.wav';
+			var next = 0;
+		 
+		</script>
+    </head>
+    <body class="theCode englishVersion">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header class="small">
+        	<img src="../images/logoSmall.png" width="160"/>
+            <a href="index.html" title="Back to HOME">Back to <strong>HOME</strong></a>
+        </header>
+        
+        <div id="audio"></div>
+        
+        <h1 class="purple"><strong>Section: </strong>Code Number <span>1</span></h1>
+        <div class="content">
+        	<div id="slider" class="code">
+            	<ul>
+                
+                	<li class="first">
+                    	<h2>Code Number 1</h2>
+                        <h3 class="noTick">Protect the rights of <a href="#" class="tooltip-service_user">service users</a> and carers, making sure everyone knows what is important to them.</h3>
+                        <img src="../images/code_slides/slide1.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(1)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="two">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Treat each person as an individual, respecting what each <a href="#" class="tooltip-service_user">service user</a> and carer thinks and wants. They must make sure that people who need it have this information.</h3>
+                        <img src="../images/code_slides/slide2.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(3)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="three">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Support the rights of <a href="#" class="tooltip-service_user">service users</a> to control their lives.</h3>
+                        <img src="../images/code_slides/slide3.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(5)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="four">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Give <a href="#" class="tooltip-service_user">service users</a> the information they need to make choices about the services they get.</h3>
+                        <img src="../images/code_slides/slide4.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(7)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="five">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Respect and keep the <a href="#" class="tooltip-dignity">dignity</a> and privacy of <a href="#" class="tooltip-service_user">service users</a> at all times.</h3>
+                        <img src="../images/code_slides/slide5.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(9)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="six">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Help <a href="#" class="tooltip-service_user">service users</a> and carers to have the same chances as everyone else.</h3>
+                        <img src="../images/code_slides/slide6.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(11)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="seven">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Respect people's differences, other cultures and what is important to them.</h3>
+                        <img src="../images/code_slides/slide7.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(13)">Play Audio</a>
+                        </div>
+                    </li>
+                    
+                	<li class="eight">
+                    	<h2>Code Number 2</h2>
+                        <h3 class="noTick">Try really hard to earn and keep the trust of <a href="#" class="tooltip-service_user">service users</a> and carers.</h3>
+                        <img src="../images/code_slides/slide8.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(15)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="nine">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Be honest and someone who can be trusted.</h3>
+                        <img src="../images/code_slides/slide9.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(17)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="ten">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Speak to people in a way that they can understand.</h3>
+                        <img src="../images/code_slides/slide10.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(19)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="eleven">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Not give out personal details about people.</h3>
+                        <img src="../images/code_slides/slide11.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(21)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="twelve">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Explain to <a href="#" class="tooltip-service_user">service users</a> and carers their organisation's policy about keeping information private.</h3>
+                        <img src="../images/code_slides/slide12.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(23)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="thirteen">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Be someone who always does what they say they will do. If this is not possible, they must explain why to <a href="#" class="tooltip-service_user">service users</a> and carers.</h3>
+                        <img src="../images/code_slides/slide13.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(25)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="fourteen">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Say if there is anything that may make it difficult for them to support a <a href="#" class="tooltip-service_user">service user</a> in the right way for that person.</h3>
+                        <img src="../images/code_slides/slide14.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(27)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="fifteen">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Keep to their organisation's policy about accepting gifts and money from <a href="#" class="tooltip-service_user">service users</a> and carers.</h3>
+                        <img src="../images/code_slides/slide15.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(29)">Play Audio</a>
+                        </div>
+                    </li>
+                    
+                	<li class="sixteen">
+                    	<h2>Code Number 3</h2>
+                        <h3 class="noTick">Help <a href="#" class="tooltip-service_user">service users</a> be independent, and at the same time keep them safe from danger.</h3>
+                        <img src="../images/code_slides/slide16.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(31)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="seventeen">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Make sure <a href="#" class="tooltip-service_user">service users</a> are independent and help them to understand and use their rights.</h3>
+                        <img src="../images/code_slides/slide17.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(33)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="eighteen">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Use their company <a href="#" class="tooltip-policies">policy</a> to speak out against bad behaviour and ways of working.</h3>
+                        <img src="../images/code_slides/slide18.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(35)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="nineteen">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Use the policy to keep themselves and others safe from violent or bullying behaviour.</h3>
+                        <img src="../images/code_slides/slide19.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(37)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="twenty">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Tell their <a href="#" class="tooltip-employer">employer</a>, or the correct outside organisation, about any problems in their service which may stop safe care being given.</h3>
+                        <img src="../images/code_slides/slide20.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(39)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="twentyone">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Tell them about any workers who are working in a way that is unsafe or stopping good care being given.</h3>
+                        <img src="../images/code_slides/slide21.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(41)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="twentytwo">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Follow their <a href="#" class="tooltip-employer">employer's</a> health and safety <a href="#" class="tooltip-policies">policies</a>, including those about drugs and alcohol.</h3>
+                        <img src="../images/code_slides/slide22.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(43)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="twentythree">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Help <a href="#" class="tooltip-service_user">service users</a> and carers to say if they are not happy. They must reply to any complaints and pass on the information to the right person.</h3>
+                        <img src="../images/code_slides/slide23.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(45)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="twentyfour">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Understand and use the control they have in the right way working with <a href="#" class="tooltip-service_user">service users</a> and carers.</h3>
+                        <img src="../images/code_slides/slide24.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(47)">Play Audio</a>
+                        </div>
+                    </li>
+                    
+                	<li class="twentyfive">
+                    	<h2>Code Number 4</h2>
+                        <h3 class="noTick">Respect the rights of <a href="#" class="tooltip-service_user">service users</a>, and at the same time make sure what they do does not hurt them or others.</h3>
+                        <img src="../images/code_slides/slide25.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(49)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="twentysix">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Understand that <a href="#" class="tooltip-service_user">service users</a> have the right to take risks.</h3>
+                        <img src="../images/code_slides/slide26.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(51)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="twentyseven">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Help <a href="#" class="tooltip-service_user">service users</a> to recognise possible and real risks to themselves and others. Support them to deal with these risks while keeping safe.</h3>
+                        <img src="../images/code_slides/slide27.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(53)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="twentyeight">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Follow <a href="#" class="tooltip-policies">policies</a> to work out if <a href="#" class="tooltip-service_users">service users'</a> behaviour may lead to a danger of them hurting themselves or others. This is called a <a href="#" class="tooltip-risk_assessment">risk assessment</a>.</h3>
+                        <img src="../images/code_slides/slide28.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(55)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="twentynine">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Take any steps needed to reduce the risk of <a href="#" class="tooltip-service_users">service users</a> doing harm to themselves or others.</h3>
+                        <img src="../images/code_slides/slide29.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(57)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="thirty">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Make sure they tell other workers and organisations about any <a href="#" class="tooltip-risk_assessments">risk assessments</a> which may affect their work with <a href="#" class="tooltip-service_users">service users</a>.</h3>
+                        <img src="../images/code_slides/slide30.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(59)">Play Audio</a>
+                        </div>
+                    </li>
+                    
+                	<li class="thirtyone">
+                    	<h2>Code Number 5</h2>
+                        <h3 class="noTick">Do their work well, so that everyone feels social care services are doing a good job.</h3>
+                        <img src="../images/code_slides/slide31.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(61)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="thirtytwo">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must not:</h4>
+                        <h3 class="cross">Harm, bully or fail to look after properly <a href="#" class="tooltip-service_user">service users</a>, carers or other workers.</h3>
+                        <img src="../images/code_slides/slide32.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(63)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="thirtythree">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must not:</h4>
+                        <h3 class="cross">Use <a href="#" class="tooltip-service_user">service users</a>, carers or other workers to get something for themselves.</h3>
+                        <img src="../images/code_slides/slide33.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(65)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="thirtyfour">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must not:</h4>
+                        <h3 class="cross">Break the trust of <a href="#" class="tooltip-service_user">service users</a> and carers.</h3>
+                        <img src="../images/code_slides/slide34.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(67)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="thirtyfive">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must not:</h4>
+                        <h3 class="cross">Give out personal information about a <a href="#" class="tooltip-service_users">service user</a> information about their home or where they work.</h3>
+                        <img src="../images/code_slides/slide11.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(69)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="thirtysix">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must not:</h4>
+                        <h3 class="cross">Have close personal relationships with <a href="#" class="tooltip-service_users">service users</a>.</h3>
+                        <img src="../images/code_slides/slide36.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(71)">Play Audio</a>
+                        </div>
+                    </li>
+                    <li class="thirtyseven">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must not:</h4>
+                        <h3 class="cross">Treat anyone differently because of their race, lifestyle, sex, age, sexuality or religion. This is against the law. They must also not agree with any other person who is treating someone differently because of these reasons.</h3>
+                        <img src="../images/code_slides/slide37.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(73)">Play Audio</a>
+                        </div>
+                    </li>
+                    <li class="thirtyeight">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must not:</h4>
+                        <h3 class="cross">Put themselves or others in danger.</h3>
+                        <img src="../images/code_slides/slide38.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(75)">Play Audio</a>
+                        </div>
+                    </li>
+                    <li class="thirtynine">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must not:</h4>
+                        <h3 class="cross">Behave in a way that would make people ask questions about whether the worker is the right kind of person to work in social care services.</h3>
+                        <img src="../images/code_slides/slide39.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(77)">Play Audio</a>
+                        </div>
+                    </li>
+                    
+                    <li class="fourty">
+                    	<h2>Code Number 6</h2>
+                        <h3 class="noTick">Always make sure they know enough to do a good job. This means making sure they have training in the right skills.</h3>
+                        <img src="../images/code_slides/slide40.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(79)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="fourtyone">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Work in ways they have agreed with the <a href="#" class="tooltip-employer">employer</a>.</h3>
+                        <img src="../images/code_slides/slide41.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(81)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="fourtytwo">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Work in a safe way that gets good results and does not break the law.</h3>
+                        <img src="../images/code_slides/slide42.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(83)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="fourtythree">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Tell their <a href="#" class="tooltip-employer">employer</a>, or the correct outside organisation, if they have a personal problem that might make it hard to do their job well and safely. They must always ask their employer to help if they feel they are not able to do any part of their work.</h3>
+                        <img src="../images/code_slides/slide43.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(85)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="fourtyfour">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Look for help from their <a href="#" class="tooltip-employer">employer</a>, or the correct outside organisation, if at any time they are not sure what to do at work.</h3>
+                        <img src="../images/code_slides/slide44.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(87)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="fourtyfive">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Work with other workers in the best way possible.</h3>
+                        <img src="../images/code_slides/slide45.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(89)">Play Audio</a>
+                        </div>
+                    </li>
+                    <li class="fourtysix">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Be honest with other workers and always treat them with respect.</h3>
+                        <img src="../images/code_slides/slide46.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(91)">Play Audio</a>
+                        </div>
+                    </li>
+                    <li class="fourtyseven">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>If the workers are from another organisation, treat them in the same way as everyone likes to be treated.</h3>
+                        <img src="../images/code_slides/slide47.png"/>
+                        <a href="#" title="Next Page" class="nextButton">Next Page</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(93)">Play Audio</a>
+                        </div>
+                    </li>
+                    <li class="last">
+                    	<h4>This means a <a href="#" class="tooltip-social_care_worker">social care worker</a> must:</h4>
+                        <h3>Understand that if they have given any work to other workers, they have a duty to make sure it is done properly.</h3>
+                        <img src="../images/code_slides/slide48.png"/>
+                        <a href="index.html" title="Back to Home" class="homeButton">Back to Home</a>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(95)">Play Audio</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>   
+        
+        <footer class="contact">
+        	<a href="#" title="Skip to another part of the code" class="codePickTrigger">Skip to another part of the code</p></a>
+        </footer>
+        
+        <div id="overlay"></div>
+        
+        <div class="tooltip" id="tooltip-care_councils">
+        	<h3>Care Councils</h3>
+            <p>Care Councils make the rules for social care workers and social care managers. They have written the codes and make sure people know about them. Care Councils can stop people working in social care if they do not work in the way the Codes say they must.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/careCouncils.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-code_of_practice">
+        	<h3>Code of Practice</h3>
+            <p>A Code of Practice tells people the standards that are expected.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/codeOfPractice.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-dignity">
+        	<h3>Dignity</h3>
+            <p>Dignity is a person's right to be treated like everyone else who is not receiving support. If people are treated with dignity, they usually have the right to make choices for themselves.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/dignity.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-employer">
+        	<h3>Employer</h3>
+            <p>An employer gives jobs to workers. An employer must make sure the jobs are done properly by the workers.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/employer.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-policies">
+        	<h3>Policies</h3>
+            <p>Policies are plans or rules an organisation has for different situations so everyone knows what they must do.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/policies.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-risk_assessment">
+        	<h3>Risk assessment</h3>
+            <p>A risk assessment works out how much danger there might be in a situation.</p>
+            <p>It also works out what needs to be done to make it less dangerous.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/riskAssessment.png"/>
+        </div>
+                
+        <div class="tooltip" id="tooltip-service_user">
+        	<h3>Service user</h3>
+            <p>A service user has support from social care workers and uses their services.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/serviceUser.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-social_care_worker">
+        	<h3>Social care worker</h3>
+            <p>A social care worker has a jobworking with people who need extra support in their lives.</p>
+            <p>For example they could be asocial worker or support worker.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/socialCareWorker.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-standard">
+        	<h3>Standard</h3>
+            <p>A standard is a way of doing something which has been agreed by everyone.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/standard.png"/>
+        </div>
+        
+        <div id="codePick">
+        	<h3>Select a code</h3>
+            <a href="#" id="codeOne" title="View Code Number 1">Code Number 1</a>
+            <a href="#" id="codeTwo" title="View Code Number 2">Code Number 2</a>
+            <a href="#" id="codeThree" title="View Code Number 3">Code Number 3</a>
+            <a href="#" id="codeFour" title="View Code Number 4">Code Number 4</a>
+            <a href="#" id="codeFive" title="View Code Number 5">Code Number 5</a>
+            <a href="#" id="codeSix" title="View Code Number 6">Code Number 6</a>
+            <span class="close"></span>
+        </div>
+                
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+
+    </body>
+</html>

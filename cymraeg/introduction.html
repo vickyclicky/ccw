@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>CCW EasyRead App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript">
+			function loadPlayer() {
+				var audioPlayer = new Audio();
+				audioPlayer.controls="controls";
+				audioPlayer.addEventListener('ended',nextSong,false);
+				audioPlayer.addEventListener('error',errorFallback,true);
+				document.getElementById("audio").appendChild(audioPlayer);
+				nextSong();
+			}
+			function nextSong() {
+				if(urls[next]!=undefined) {
+					var audioPlayer = document.getElementsByTagName('audio')[0];
+					if(audioPlayer!=undefined) {
+						audioPlayer.src=urls[next];
+						audioPlayer.load();
+						audioPlayer.play();
+						next++;
+					} else {
+						loadPlayer();
+					}
+				}
+			}
+			function errorFallback() {
+					playPause();
+			}
+			function playPause() {
+				var audioPlayer = document.getElementsByTagName('audio')[0];
+				if(audioPlayer!=undefined) {
+					if (audioPlayer.paused) {
+						audioPlayer.play();
+					} else {
+						audioPlayer.pause();
+					}
+				} else {
+					loadPlayer();
+				}
+			}
+			function pickSong(num) {
+				next = num;
+				nextSong();
+			}
+		 
+			var urls = new Array();
+			urls[1] = 'audio/intro-1.wav';
+			urls[2] = '';
+			urls[3] = 'audio/intro-2.wav';
+			urls[4] = '';
+			urls[5] = 'audio/intro-3.wav';
+			urls[6] = '';
+			urls[7] = 'audio/intro-4.wav';
+			urls[8] = '';
+			urls[9] = 'audio/intro-5.wav';
+			urls[10] = '';
+			urls[11] = 'audio/intro-6.wav';
+			urls[12] = '';
+			urls[13] = 'audio/intro-7.wav';
+			urls[14] = '';
+			urls[15] = 'audio/intro-8.wav';
+			urls[16] = '';
+			urls[17] = 'audio/intro-9.wav';
+			var next = 0;
+		 
+		</script>
+    </head>
+    <body class="welshVersion">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header class="small">
+        	<img src="../images/logoSmall.png" width="160"/>
+            <a href="index.html" title="Hafan"><strong>HAFAN</strong></a>
+        </header>
+        
+        <div id="audio"></div>
+        
+        <h1><strong>Adran:</strong> Cyflwyniad</h1>
+        
+        <div class="content">
+        	<div id="slider">
+            	<ul>
+                	<li class="first">
+                    	<img src="../images/introduction_slides/slide1.png"/>
+                        <h3>Mae’r ap hwn ynglŷn â’r <a href="#" class="tooltip-code_of_practice">Côd Ymarfer</a> ar gyfer <a href="#" class="tooltip-social_care_worker">gweithwyr gofal cymdeithasol</a> a <a href="#" class="tooltip-employer">chyflogwyr</a> <a href="#" class="tooltip-social_care_worker">gweithwyr gofal cymdeithasol</a> yng Nghymru.</h3>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(1)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li>
+                    	<img src="../images/introduction_slides/slide2.png"/>
+                        <h3>Bydd y cyflwyniad hwn yn eich helpu i ddeall: <ul><li>beth yw pwrpas y Côd, a</li><li>beth mae’n ei olygu i:<ol><li>1. <a href="#" class="tooltip-service_user">Ddefnyddwyr Gwasanaeth</a></li><li>2. Aelodau’r cyhoedd</li></ol></li></ul></h3>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(3)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li>
+                    	<img src="../images/introduction_slides/slide3.png"/>
+                        <h3>Bydd y Côd yn eich helpu i ddeall: <ol><li>1. Sut y dylai <a href="#" class="tooltip-social_care_worker">gweithwyr gofal cymdeithasol</a> eich trin.</li><li>2. Sut y dylai <a href="#" class="tooltip-employer">cyflogwyr</a> gefnogi <a href="#" class="tooltip-social_care_worker">gweithwyr gofal cymdeithasol</a> i wneud eu gwaith yn dda.</li></ol></h3>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(5)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li>
+                    	<img src="../images/introduction_slides/slide4.png"/>
+                        <h3>Mae <a href="#" class="tooltip-code_of_practice">Côd Ymarfer</a> ar gyfer <a href="#" class="tooltip-social_care_worker">gweithwyr gofal cymdeithasol</a> ac mae <a href="#" class="tooltip-code_of_practice">Côd Ymarfer</a> ar gyfer eu <a href="#" class="tooltip-employer">cyflogwyr</a>. Mae’r ddau gyda’i gilydd yn yr ap hwn.</h3>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(7)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li>
+                    	<img src="../images/introduction_slides/slide5.png"/>
+                        <h3>Mae’r <a href="#" class="tooltip-code_of_practice">Côd Ymarfer</a> ar gyfer <a href="#" class="tooltip-social_care_worker">Gweithwyr Gofal Cymdeithasol</a> yn rhestr sy’n rhoi’r <a href="#" class="tooltip-standard">safonau</a> mae’n rhaid i <a href="#" class="tooltip-social_care_worker">weithwyr gofal cymdeithasol</a> eu defnyddio yn eu gwaith.</h3>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(9)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li>
+                    	<img src="../images/introduction_slides/slide6.png"/>
+                        <h3>Mae’r Côd yn egluro beth yw’r <a href="#" class="tooltip-standard">safonau</a>. Mae hefyd yn  gwneud yn siwr bod gweithwyr yn gwybod y <a href="#" class="tooltip-standard">safonau</a> y mae <a href="#" class="tooltip-employer">cyflogwyr</a>, <a href="#" class="tooltip-service_user">defnyddwyr gwasanaeth</a> a’r cyhoedd yn eu disgwyl.</h3>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(11)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li>
+                    	<img src="../images/introduction_slides/slide7.png"/>
+                        <h3>Mae’r <a href="#" class="tooltip-code_of_practice">Côd Ymarfer</a> ar gyfer <a href="#" class="tooltip-employer">Cyflogwyr</a> <a href="#" class="tooltip-social_care_worker">Gweithwyr Gofal Cymdeithasol</a> yn dweud wrth gyflogwyr beth mae’n rhaid iddyn nhw ei wneud i wneud yn siwr bod <a href="#" class="tooltip-social_care_worker">gweithwyr gofal cymdeithasol</a> yn cadw at y rheolau.</h3>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(13)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li>
+                    	<img src="../images/introduction_slides/slide8.png"/>
+                        <h3>Mae’r <a href="#" class="tooltip-code_of_practice">Côd</a> yn dweud wrth <a href="#" class="tooltip-employer">gyflogwyr</a> bod rhaid iddyn nhw: <ol><li>1. Gadw at y <a href="#" class="tooltip-standard">safonau</a> yn eu Côd.</li><li>2. Helpu <a href="#" class="tooltip-social_care_worker">gweithwyr gofal cymdeithasol</a> i wneud beth mae’r Côd yn ei ddweud.</li><li>3.Gwneud rhywbeth os nad yw <a href="#" class="tooltip-social_care_worker">gweithwyr gofal cymdeithasol</a> yn cyrraedd y <a href="#" class="tooltip-standard">safonau</a>.</li></ol></h3>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(15)">Play Audio</a>
+                        </div>
+                    </li>
+                	<li class="last">
+                    	<img src="../images/introduction_slides/slide9.png"/>
+                        <h3>Bydd y <a href="#" class="tooltip-care_councils">Cynghorau Gofal</a> yn gwneud yn siwr bod pawb yn gwybod am y <a href="#" class="tooltip-standard">safonau</a> drwy eu dangos i lawer o bobl.</h3>
+                        <div class="audioIcon">
+                        	<a onclick="pickSong(17)">Play Audio</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>   
+        
+        <div class="slideNavigation intro">
+        	<a href="#" title="Blaenorol" id="prev">Blaenorol</a>
+        	<a href="#" title="Nesaf" id="next">Nesaf</a>
+            <a href="index.html" title="Hafan" id="backHome">Hafan</a>
+        </div>        
+        
+        <div id="overlay"></div>
+        
+        <div class="tooltip" id="tooltip-care_councils">
+        	<h3>Cynghorau Gofal</h3>
+            <p>Mae Cynghorau Gofal yn gwneud y rheolau ar gyfer gweithwyr gofal cymdeithasol a rheolwyr gofal cymdeithasol. Maent wedi ysgrifennu’r Codau ac maent yn sicrhau bod pobl yn gwybod amdanynt. Gall Cynghorau Gofal rwystro pobl rhag gweithio mewn gofal cymdeithasol os nad ydynt yn gweithio yn y ffordd mae’r Codau’n dweud bod rhaid iddynt wneud.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/careCouncils.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-code_of_practice">
+        	<h3>Côd Ymarfer</h3>
+            <p>Mae Côd Ymarfer yn dweud wrth bobl am y safonau a ddisgwylir.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/codeOfPractice.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-dignity">
+        	<h3>Urddas</h3>
+            <p>Dignity is a person's right to be treated like everyone else who is not receiving support. If people are treated with dignity, they usually have the right to make choices for themselves.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/dignity.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-employer">
+        	<h3>Cyflogwr</h3>
+            <p>Mae cyflogwr yn rhoi swyddi i weithwyr. Mae’n rhaid i gyflogwr sicrhau y caiff y gwaith ei wneud yn iawn gan y gweithwyr.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/employer.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-policies">
+        	<h3>Polisïau</h3>
+            <p>Mae polisïau yn gynlluniau neu’n rheolau sydd gan sefydliad ar gyfer gwahanol sefyllfaoedd fel bod pawb yn gwybod beth mae’n rhaid iddynt ei wneud.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/policies.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-risk_assessment">
+        	<h3>Asesiad risg</h3>
+            <p>Mae asesiad risg yn darganfod faint o berygl a allai fod mewn sefyllfa.</p>
+            <p>Mae hefyd yn pennu’r hyn mae angen ei wneud i’w wneud yn llai peryglus.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/riskAssessment.png"/>
+        </div>
+                
+        <div class="tooltip" id="tooltip-service_user">
+        	<h3>Defnyddiwr gwasanaeth</h3>
+            <p>Mae defnyddiwr gwasanaeth yn derbyn cymorth gan weithwyr gofal cymdeithasol ac yn defnyddio eu gwasanaethau.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/serviceUser.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-social_care_worker">
+        	<h3>Gweithiwr Gofal Cymdeithasol</h3>
+            <p>Mae gan weithiwr gofal cymdeithasol swydd yn gweithio gyda phobl sydd angen cymorth ychwanegol yn eu bywydau. Er enghraifft, gallai fod yn weithiwr cymdeithasol neu’n weithiwr cymorth.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/socialCareWorker.png"/>
+        </div>
+        
+        <div class="tooltip" id="tooltip-standard">
+        	<h3>Safon</h3>
+            <p>Mae safon yn ffordd o wneud rhywbeth y cytunwyd arni gan bawb.</p>
+            <span class="close"></span>
+            <img src="../images/tooltips/standard.png"/>
+        </div>
+                
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>CCW EasyRead App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="../../css/main.css">
+        <script src="../../js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript">
+			function loadPlayer() {
+				var audioPlayer = new Audio();
+				audioPlayer.controls="controls";
+				audioPlayer.addEventListener('ended',nextSong,false);
+				audioPlayer.addEventListener('error',errorFallback,true);
+				document.getElementById("audio").appendChild(audioPlayer);
+				nextSong();
+			}
+			function nextSong() {
+				if(urls[next]!=undefined) {
+					var audioPlayer = document.getElementsByTagName('audio')[0];
+					if(audioPlayer!=undefined) {
+						audioPlayer.src=urls[next];
+						audioPlayer.load();
+						audioPlayer.play();
+						next++;
+					} else {
+						loadPlayer();
+					}
+				}
+			}
+			function errorFallback() {
+					playPause();
+			}
+			function playPause() {
+				var audioPlayer = document.getElementsByTagName('audio')[0];
+				if(audioPlayer!=undefined) {
+					if (audioPlayer.paused) {
+						audioPlayer.play();
+					} else {
+						audioPlayer.pause();
+					}
+				} else {
+					loadPlayer();
+				}
+			}
+			function pickSong(num) {
+				next = num;
+				nextSong();
+			}
+		 
+			var urls = new Array();
+			urls[1] = '../audio/wl-dignity.wav';
+			var next = 0;
+		 
+		</script>
+    </head>
+    <body class="welshVersion wordListBody">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header class="small">
+        	<img src="../../images/logoSmall.png" width="160"/>
+            <a href="../index.html" title="Hafan"><strong>HAFAN</strong></a>
+        </header>
+        
+        <div id="audio"></div>
+        
+        <h1 class="purple"><img src="../../images/h1-contact.png"/>Rhestr geiriau</h1>
+        
+        <h2 class="blue"><div class="audioIcon"><a onclick="pickSong(1)">Play Audio</a></div>Urddas</h2>
+        
+        <div class="content wordList single">
+        	<h3>Urddas yw hawl person i gael ei drin fel pawb arall sy’ ddim yn cael cefnogaeth.</h3>
+            <h5>Os ydy pobl yn cael eu trin efo urddas, fel arfer mae ganddyn nhw’r hawl i wneud eu dewisiadau eu hun.</h5>
+            <img class="bottomRightImage" src="../../images/tooltips/dignity.png"/>
+            <a href="../word-list.html" class="back"><span></span>Nôl at y rhestr geiriau</a>            
+        </div>
+        
+        <div class="slideNavigation wordList">
+        	<a href="code-of-practice.html" title="Blaenorol" id="prev">Blaenorol</a>
+        	<a href="employer.html" title="Nesaf" id="next">Nesaf</a>
+        </div>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="../../js/plugins.js"></script>
+        <script src="../../js/main.js"></script>
+
+    </body>
+</html>
