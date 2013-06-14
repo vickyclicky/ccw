@@ -543,7 +543,7 @@ body
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 100;
+	z-index: 2000;
 	width: 100%;
 	height: 100%;
 	display: none;
@@ -777,7 +777,7 @@ h1 img
 	background: -ms-linear-gradient(top,  rgba(159,58,151,1) 0%,rgba(105,45,101,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(159,58,151,1) 0%,rgba(105,45,101,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f3a97', endColorstr='#692d65',GradientType=0 ); /* IE6-8 */
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 .content a.bigLink.purple.bottom
@@ -845,6 +845,11 @@ h1 img
 	text-align: left;
 }
 
+.welshVersion .content a.bigLink h3
+{
+	font-size: 17px;
+}
+
 .content .bottomleftImage
 {
 	position: absolute;
@@ -898,7 +903,7 @@ h1 img
 	padding: 0;
 	list-style: none;
 	width: 280px;
-	height: 420px !important;
+	height: 300px !important;
 }
 
 .content #slider > ul > li
@@ -912,6 +917,7 @@ h1 img
 	margin: 10px 0 0 0;
 	color: #333092;
 	font-weight: normal;
+	font-size: 18px;
 }
 
 .content #slider > ul > li h3 a
@@ -992,6 +998,7 @@ footer
 	width: 100%;
 	float: left;
 	position: fixed;
+	z-index: 1000;
 }
 
 footer.shadow
@@ -1029,6 +1036,7 @@ body > .back
 	bottom: 0;
 	left: 0;
 	position: fixed;
+	z-index: 1000;
 }
 
 .slideNavigation
@@ -1157,7 +1165,7 @@ footer.contact a
 {
 	color: #333092;
 	margin: -10px 0 10px 0;
-	font-size: 21px;
+	font-size: 17px;
 	padding-left: 55px;
 	text-align: left;
 	background: url(../images/code_slides/tick.png) top left no-repeat;
@@ -1177,7 +1185,7 @@ footer.contact a
 
 #slider.code ul li h4
 {
-	font-size: 23px;
+	font-size: 18px;
 	color: #333092;
 	margin-top: 0;
 	font-weight: bold;
@@ -1214,7 +1222,7 @@ footer.contact a
 
 #slider.questions ul li.first h3
 {
-	font-size: 30px;
+	font-size: 23px;
 }
 
 #slider.code ul li img,
@@ -1258,9 +1266,9 @@ footer.contact a
     margin: 5%;
     padding: 8%;
     position: absolute;
-    top: 120px;
+    top: 50px;
     width: 74%;
-    z-index: 100;
+    z-index: 3000;
 	-webkit-box-shadow:  0px 1px 8px 0px #999;
 	box-shadow:  0px 1px 8px 0px #999;
 }
@@ -1523,20 +1531,25 @@ body > h2 span
 
 #slider.code ul li.two h3
 {
-	font-size: 18px;
+	font-size: 14px;
 }
 
 #slider.code ul li.thirtyseven h3
 {
-	font-size: 16px;
+	font-size: 13px;
 }
 
 #slider.code ul li.thirtynine h3
 {
-	font-size: 19px;
+	font-size: 15px;
 }
 
 #slider.code ul li.fourtythree h3
+{
+	font-size: 13px;
+}
+
+#slider.code ul li.twentyeight h3
 {
 	font-size: 15px;
 }
@@ -1548,7 +1561,7 @@ body > h2 span
 
 #slider.code ul li.seven > a,
 #slider.code ul li.eight > a
-{
+{#FFF
 	margin-top: -50px;
 }
 
@@ -1606,7 +1619,7 @@ footer.contact a.codePickTrigger
 .content.contact h3 a.social
 {
 	float: left;
-	margin: 5px 10px 0 0;
+	margin: 5px 10px 40px 0;
 	width: 30px;
 }
 
@@ -1650,32 +1663,38 @@ footer.contact a.codePickTrigger
     width: 89px;
 }
 
-.welshVersion #slider.code ul li.two h3
+.welshVersion #slider.code ul li.two h3,
+.welshVersion #slider.code ul li.twentyseven h3,
+.welshVersion #slider.code ul li.thirtythree h3
 {
 	font-size: 15px;
 }
 
+.welshVersion #slider.code ul li.thirtyfive h3,
 .welshVersion #slider.code ul li.thirteen h3,
+.welshVersion #slider.code ul li.twentyeight h3
+{
+	font-size: 13px;
+}
+
 .welshVersion #slider.code ul li.fourteen h3,
-.welshVersion #slider.code ul li.twentythree h3,
-.welshVersion #slider.code ul li.twentyeight h3,
 .welshVersion #slider.code ul li.thirty h3
 {
-	font-size: 17px;
+	font-size: 14px;
+}
+
+.welshVersion #slider.code ul li.twentythree h3,
+.welshVersion #slider.code ul li.twentytwo h3
+{
+	font-size: 15px;
 }
 
 .welshVersion #slider.code ul li.thirtyseven h3,
 .welshVersion #slider.code ul li.fourtythree h3
 {
-	font-size: 14px;
+	font-size: 11px;
 }
 
-.welshVersion #slider.code ul li.thirtythree h3
-{
-	font-size: 20px;
-}
-
-.welshVersion #slider.code ul li.thirtyfive h3,
 .welshVersion #slider.code ul li.fourtyfour h3
 {
 	font-size: 18px;
@@ -1754,4 +1773,14 @@ h2 .audioIcon a
 	position: static;
 	float: left;
 	margin: -3px 1px 0 10px;
+}
+
+.welshVersion.theCodeIntroduction .content h3
+{
+    font-size: 18px;
+}
+
+.introduction #slider ul li img
+{
+	height: 100px;
 }
